@@ -36,7 +36,7 @@ std::vector<float> GeluOCL(const std::vector<float>& input) {
         return output;
     }
 
-    err = clGetDeviceIDs(platform, CL_DEVICE_GPU, 1, &device, nullptr);
+    err = clGetDeviceIDs(platform, CL_DEVICE_TYPE_GPU, 1, &device, nullptr);
     if (err != CL_SUCCESS) {
         std::cerr << "Failed to get device ID." << std::endl;
         return output;
